@@ -1,0 +1,171 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Aug 23, 2022, 9:23:48 PM
+    Author     : USER
+*/
+body {
+	padding: 0px;
+	background-color: #555;
+}
+
+.header {
+	/*box-sizing: border-box*/
+	margin: 0px 0px 4px 0px;
+	padding: 10px;
+	width: 99%;
+	height: 10vh;
+	background-color: #99a;
+}
+
+.header h1 {
+	margin: 5px;
+	font-family: Verdana, Arial;
+	text-indent: 50px;
+	letter-spacing: 25px;
+	color: #00a;
+}
+
+.center {
+	float: left;
+}
+
+.sidebarLeft {
+	float: left;
+	padding: 5px;
+	margin-right: 1%;
+	height: 80vh;
+	background-color: #99a;
+}
+
+.sidebarLeft h1 {
+	display: block;
+	padding: 5px 5px 0px 5px;
+	font-family: Verdana, Arial;
+	font-size: 30px;
+	color: #Cff;
+}
+
+.sidebarLeft a {
+	display: block;
+	margin: 10px 5px;
+	padding: 5px 5px;
+	font-family: Verdana, Arial;
+	font-size: 20px;
+	text-decoration: none;
+	color: #Cff;
+	background-color: #499;
+	border-radius: 5px;
+}
+
+.sidebarRight {
+	float: right;
+	padding: 5px;
+	margin-left: 1%;
+	height: 80vh;
+	width: 20%;
+	background-color: #99a;
+}
+
+.sidebarRight h1 {
+	display: block;
+	padding: 5px 5px 0px 5px;
+	font-family: Verdana, Arial;
+	font-size: 20px;
+	color: #Cff;
+}
+
+.sidebarRight p {
+	display: block;
+	margin: 10px 5px;
+	padding: 5px 5px;
+	font-family: Verdana, Arial;
+	text-align: justify;
+	font-size: 16px;
+	color: #fff;
+}
+
+#menu {
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	background-color: #109910;
+}
+
+#menu p {
+	padding: 2.5vmin 1.5vmin;
+	margin: 2.5vmin 1.5vmin;
+	font-family: Verdana, Arial;
+	font-weight: bold;	
+	color: #770077;
+	font-size: 24px;
+}
+
+#menu button {
+	display: block;
+	width: 100%;
+	border: none;
+	margin: 0px;
+	padding: 10px;
+	font-family: Verdana, Arial;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+#reversi {
+	font-size: 30px !important;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#newGame {
+	padding: 2.5vmin 1.5vmin !important;
+	margin: 0px !important;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+	color: #aaa !important;
+	background-color: #770077;
+	font-size: 24px;
+}
+
+#player1Lb {
+	color: white !important;
+}
+
+#player2Lb {
+	color: black !important;
+}
+
+#hartes {
+	font-size: 30px !important;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown {
+	display: block;
+	padding: 0;
+	margin: 2.5vmin 1.5vmin;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	background-color: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgba(200,0,200,0.7);
+	z-index: 1;
+}
+
+.dropdown-content button:hover {
+	background-color: #770077;
+	color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover #newGame {
+	color: #770077;
+}
