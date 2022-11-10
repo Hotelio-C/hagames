@@ -227,16 +227,13 @@ function drawMenu() {
 		}
 	}
 	if (menuTipe == 4) {
+                infoFont = "bold 20px Courier New, Monospace";
 		brush.font = infoFont;
 		brush.fillStyle = color2;
-		brush.fillText("This game was desined and", t, 13*t);
+		brush.fillText("This game was designed and", t, 13*t);
 		brush.fillText("developed by:", 0.5*t, 15.5*t);
 		brush.fillStyle = color1;
 		brush.fillText("Hotelio China", t, 18*t);
-		brush.fillStyle = color2;
-		brush.fillText("With hellp and support of:", t, 22*t);
-		brush.fillStyle = color1;
-		brush.fillText("Osvaldo Maria", t, 24.5*t);
 	}
 }
 

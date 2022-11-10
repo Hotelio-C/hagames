@@ -306,7 +306,7 @@ function drawMenu() {
 	if (menuTipe == 4) {
 		brush.font = infoFont;
 		brush.fillStyle = color2;
-		brush.fillText("This game was desined and", t, 13*t);
+		brush.fillText("This game was designed and", t, 13*t);
 		brush.fillText("developed by:", 0.5*t, 15.5*t);
 		brush.fillStyle = color1;
 		brush.fillText("Hotelio China", t, 18*t);
