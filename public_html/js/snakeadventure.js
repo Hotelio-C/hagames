@@ -7,7 +7,7 @@
 
 // Animation Variabels
 var color1, color2, color3, color4;
-var logoColor="rgb(55, 55, 55)"
+var logoColor="rgb(55, 55, 55)";
 
 var titleFont, menuOptionFont, currentOptionFont, stateFont, logoFont, infoFont;
 var menuOptions = new Array(10).fill(0).map(() => new Array(13).fill(0));
@@ -108,8 +108,8 @@ function initialize() {
 function setScreenSize() {
 	tela.width = 250;
 	tela.height = 290;
-	var sWidth = window.screen.availWidth;
-	var sHeight = window.screen.availHeight;
+	let sWidth = window.screen.availWidth;
+	let sHeight = window.screen.availHeight;
 	if(sHeight/sWidth > 290/250) {
 		tela.width = sWidth*0.60;
 		tela.height = tela.width*290/250;
@@ -117,8 +117,8 @@ function setScreenSize() {
 		tela.height = sHeight*0.60;
 		tela.width = tela.height*250/290;
 	}
-	var t = tela.width/25;
-	var s;
+	let t = tela.width/25;
+	let s;
 	s = 4*t;
 	titleFont = "bold "+s.toString()+"px Courier New, Monospace";
 	s = 2*t;
@@ -166,9 +166,9 @@ function setStaticVariables() {
 	menuOptions[3][9] = "LEVEL 9";
 	menuOptions[3][10] = "LEVEL 10";
 
-    menuOptions[4][1] = "LENTH 10";
-    menuOptions[4][2] = "LENTH 20";
-    menuOptions[4][3] = "LENTH 30";
+        menuOptions[4][1] = "LENTH 10";
+        menuOptions[4][2] = "LENTH 20";
+        menuOptions[4][3] = "LENTH 30";
 	menuOptions[4][4] = "LENTH 40";
 	menuOptions[4][5] = "LENTH 50";
 	menuOptions[4][6] = "LENTH 60";
@@ -177,27 +177,27 @@ function setStaticVariables() {
 	menuOptions[4][9] = "LENTH 90";
 	menuOptions[4][10] = "LENTH 100";
 
-    menuOptions[5][1] = "DRAW STAGE";
-    menuOptions[5][2] = "STAGE 0";
-    menuOptions[5][3] = "STAGE 1";
-    menuOptions[5][4] = "STAGE 2";
-    menuOptions[5][5] = "STAGE 3";
-    menuOptions[5][6] = "STAGE 4";
-    menuOptions[5][7] = "STAGE 5";
-    menuOptions[5][8] = "STAGE 6";
-    menuOptions[5][9] = "STAGE 7";
-    menuOptions[5][10] = "STAGE 8";
-    menuOptions[5][11] = "STAGE 9";
-    menuOptions[5][12] = "STAGE 10";
+        menuOptions[5][1] = "DRAW STAGE";
+        menuOptions[5][2] = "STAGE 0";
+        menuOptions[5][3] = "STAGE 1";
+        menuOptions[5][4] = "STAGE 2";
+        menuOptions[5][5] = "STAGE 3";
+        menuOptions[5][6] = "STAGE 4";
+        menuOptions[5][7] = "STAGE 5";
+        menuOptions[5][8] = "STAGE 6";
+        menuOptions[5][9] = "STAGE 7";
+        menuOptions[5][10] = "STAGE 8";
+        menuOptions[5][11] = "STAGE 9";
+        menuOptions[5][12] = "STAGE 10";
 
-    menuOptions[6][1] = "PLAYER";
-    menuOptions[6][2] = "THEME";
-    menuOptions[6][3] = "BACK";
+        menuOptions[6][1] = "PLAYER";
+        menuOptions[6][2] = "THEME";
+        menuOptions[6][3] = "BACK";
 
-    menuOptions[7][1] = "DARK";
-    menuOptions[7][2] = "RED";
-    menuOptions[7][3] = "GREEN";
-    menuOptions[7][4] = "BLUE";
+        menuOptions[7][1] = "DARK";
+        menuOptions[7][2] = "RED";
+        menuOptions[7][3] = "GREEN";
+        menuOptions[7][4] = "BLUE";
 }
 
 function gameLoop() {
@@ -258,7 +258,7 @@ function paint() {
 }
 
 function drawMenu() {
-	var t = tela.width/25;
+	let t = tela.width/25;
 	brush.fillStyle = color2;
 	brush.font = titleFont;
 	brush.fillText("SNAKE", 6*t, 5*t);
@@ -320,7 +320,7 @@ function drawMenu() {
 function drawSnakeAndPrey() {
 	//Snake body
 	brush.fillStyle = color2;
-	var t = tela.width/25;
+	let t = tela.width/25;
 	for (i = 1; i < snakeLenth; i++) {
 		x = snake[i][0] - 1;
 		y = snake[i][1] + 1;
@@ -343,8 +343,8 @@ function drawSnakeAndPrey() {
 }
 
 function drawStage() {
-	var t = tela.width/25;
-	var c = t*0.2;
+	let t = tela.width/25;
+	let c = t*0.2;
 	brush.fillStyle = color3;
 	for (i = 0; i <= 250; i++) {
 		if(stage[i][0] != 0 && stage[i][1] != 0) {
@@ -366,7 +366,7 @@ function drawStage() {
 }
 
 function drawStateBarrs() {
-	var t = tela.width/25;
+	let t = tela.width/25;
 	brush.fillStyle = color2;
 	brush.fillRect(0, 0, t * 25, t * 2);
 	brush.fillRect(0, t * 27, t * 25, t * 2);
@@ -398,7 +398,7 @@ function drawStateBarrs() {
 }
 
 function drawGameOverMessage() {
-	var t = tela.width/25;
+	let t = tela.width/25;
 	brush.fillStyle = color1;
 	brush.font = currentOptionFont;
 	if(!endOfGame) {
@@ -413,8 +413,8 @@ function drawGameOverMessage() {
 }
 
 function drawCreatingFieldObjects() {
-	var t = tela.width/25;
-	var c = t*0.2;
+	let t = tela.width/25;
+	let c = t*0.2;
 	brush.fillStyle = color2;
 	brush.fillRect(0, 0, 25*t, 2*t);
 	brush.fillRect(0, 27*t, 25*t, 2*t);
@@ -474,7 +474,7 @@ function moveSnake() {
 }
 
 function generatePrey() {
-	var done = false;
+	let done = false;
 	while (done == false) {
 		prey[0] = Math.floor(Math.random() * 25) + 1;
 		prey[1] = Math.floor(Math.random() * 25) + 1;
@@ -775,25 +775,25 @@ function setListeners() {
 		if(isCreatingField) {
 			switch (e.keyCode) {
 				case 37:
-					creattingStageAction("left")
+					creattingStageAction("left");
 					break;
 				case 38:
-					creattingStageAction("up")
+					creattingStageAction("up");
 					break;
 				case 39:
-					creattingStageAction("right")
+					creattingStageAction("right");
 					break;
 				case 40:
-					creattingStageAction("down")
+					creattingStageAction("down");
 					break;
 				case 90:
-					creattingStageAction("draw")
+					creattingStageAction("draw");
 					break;
 				case 88:
-					creattingStageAction("erase")
+					creattingStageAction("erase");
 					break;
 				case 13:
-					creattingStageAction("enter")
+					creattingStageAction("enter");
 					break;
 				case 73:
 					//creattingStageAction("printData")
@@ -1075,7 +1075,7 @@ function acelerateON() {
 
 function acelerateOFF() {;
 	aceleration = 0;
-	acelerateIsOn = false
+	acelerateIsOn = false;
 }
 
 function pauseF() {

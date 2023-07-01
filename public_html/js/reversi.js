@@ -41,8 +41,6 @@ function getCellsToReversi(m, n) {
 	var cellsFound = [];
 	var k, l;
 	if(board[m][n] == 0) {
-		c1 = true;
-		c2 = true;
 		for(u = -1; u <= 1; u++) {
 			for(v = -1; v <= 1; v++){
 				cellsFound = [];
@@ -234,10 +232,10 @@ function drawBoard() {
 		y2 = squareLenth;
 		brush.moveTo(x1, y1);
 		brush.lineTo(x2, y2);
-		y1 = i * d
-		y2 = i * d
-		x1 = 0
-		x2 = squareLenth
+		y1 = i * d;
+		y2 = i * d;
+		x1 = 0;
+		x2 = squareLenth;
 		brush.moveTo(x1, y1);
 		brush.lineTo(x2, y2);
 	}

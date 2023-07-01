@@ -71,11 +71,11 @@ var screenUpDateTimer = 0;
 
 // Testing Methods
 function startTetrix(){
-	// var er = ""
-	// for (i = 0; i < 100; i++) {
-		// er = er + Math.floor(Math.random() * 7).toString();
-	// }
-	// checkExecuted(er);
+//	 var er = ""
+//	 for (i = 0; i < 100; i++) {
+//		 er = er + Math.floor(Math.random() * 7).toString();
+//	 }
+//	 checkExecuted(er);
 	tela = document.getElementById("tela");
 	brush  = tela.getContext("2d");
 	initialize();
@@ -144,8 +144,8 @@ function setStaticVariables() {
 function setScreenSize() {
 	tela.width = 310;
 	tela.height = 410;
-	var sWidth = window.screen.availWidth;
-	var sHeight = window.screen.availHeight;
+	let sWidth = window.screen.availWidth;
+	let sHeight = window.screen.availHeight;
 	if(sHeight/sWidth > 410/310) {
 		tela.width = sWidth*0.60;
 		tela.height = tela.width*410/310;
@@ -153,8 +153,8 @@ function setScreenSize() {
 		tela.height = sHeight*0.60;
 		tela.width = tela.height*310/410;
 	}
-	var t = tela.width/31*2;
-	var s;
+	let t = tela.width/31*2;
+	let s;
 	s = 3.2*t;
 	titleFont = "bold "+s.toString()+"px Courier New, Monospace";
 	s = 1.6*t;
@@ -182,13 +182,13 @@ function paint() {
 }
 
 function drawMenu() {
-	var t = tela.width/25;
+	let t = tela.width/25;
 	brush.fillStyle = color2;
 	brush.font = titleFont;
 	brush.fillText("TETRIS", 3.25*t, 7*t);
 
 	if (menuTipe == 1) {
-		var c =0;
+		let c =0;
 		for (i = firstOptions; i <= lastOptions; i++) {
 			if (i != currentOption) {
 				brush.font = menuOptionFont;
@@ -238,9 +238,9 @@ function drawMenu() {
 }
 
 function drawPlayingObjects() {
-	var t = tela.width/310;
-	var x, y;
-	var rgb;
+	let t = tela.width/310;
+	let x, y;
+	let rgb;
 	generateBlockImage();
 	// Playing Limits Border
 	brush.fillStyle = color3;
@@ -311,7 +311,7 @@ function drawPlayingObjects() {
 
 function drawBlockPiece(x, y, rgb) {
 	if (y > 0) {
-		var t = tela.width/310;
+		let t = tela.width/310;
 		brush.fillStyle = modifyColor(rgb, -30);
 		brush.beginPath();
 		brush.moveTo((20 * (x - 1) + 5)*t, (20 * (y - 1) + 5)*t);
@@ -334,8 +334,8 @@ function drawBlockPiece(x, y, rgb) {
 }
 
 function modifyColor(color, d) {
-	var rgb = color;
-	var r, g, b;
+	let rgb = color;
+	let r, g, b;
 	rgb = rgb.substring(4, rgb.length-1).replace(/ /g, '').split(',');
 	r = parseInt(rgb[0]) + d;
 	g = parseInt(rgb[1]) + d;
@@ -431,13 +431,13 @@ function moveBlock(direction) {
 }
 
 function rotate(direction) {
-	var validPosition = false;
-	var leftAdjacent = false;
-	var rightAdjacent = false;
-	var errorFound = false;
-	var previousOrientation = orientation;
-	var previousPosition = [position[0], position[1]];
-	var x, y;
+	let validPosition = false;
+	let leftAdjacent = false;
+	let rightAdjacent = false;
+	let errorFound = false;
+	let previousOrientation = orientation;
+	let previousPosition = [position[0], position[1]];
+	let x, y;
 
 	//ROTATE BLOCK----------------------------------------------------------
 	if (direction == "clockWise" && rotateAvaileble) {
@@ -514,7 +514,7 @@ function rotate(direction) {
 }
 
 function checkAvailebleMoves() {
-	var x, y;
+	let x, y;
 	downAvaileble = true;
 	leftAvaileble = true;
 	rightAvaileble = true;
@@ -550,7 +550,7 @@ function checkAvailebleMoves() {
 }
 
 function setNextBlock() {
-	var validBlock = false;
+	let validBlock = false;
 
 	currentBlock = nextBlock;
 
@@ -580,7 +580,7 @@ function setNextBlock() {
 }
 
 function freezBlock() {
-	var x, y;
+	let x, y;
 	for (i = 0; i <= 3; i++) {
 		x = currentBlockImage[i][0];
 		y = currentBlockImage[i][1];
@@ -618,7 +618,7 @@ function gameOver() {
 		}
 	}**/
 	//----------------------------------------------------------------------
-
+        
 	resumeAvailable = false;
 	pause = true;
 	gameIsOver = true;
@@ -689,7 +689,8 @@ function checkState() {
 				velocite = 60;
 			}
 			levelControler = 0;
-		} else {
+		}
+                else {
 			endOfGame = true;
 			gameOver();
 		}
