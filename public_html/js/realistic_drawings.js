@@ -28,5 +28,5 @@ function prevPic() {
     if (currentPic < 1){
         currentPic = maxPic;
     }
-    picture.src = "../img_realistic/img_"+currentPic+".jpg";``
+    picture.src = "../img_realistic/img_"+currentPic+".jpg";
 }
